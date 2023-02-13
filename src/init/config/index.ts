@@ -7,7 +7,6 @@ const {
 	NODE_ENV
 } = process.env;
 
-
 export const node = {
 	node_env: NODE_ENV
 };

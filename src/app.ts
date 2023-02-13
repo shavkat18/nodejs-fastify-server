@@ -1,8 +1,8 @@
 import fastify, {FastifyInstance} from "fastify";
 import cors from "@fastify/cors";
-import pino from "pino";
 import {app} from "@config";
 import api_v1 from "@api/v1";
+import {logger} from "@utils/logger";
 
 class App {
 	public app: FastifyInstance;
@@ -10,7 +10,7 @@ class App {
 	public port: number;
 
 	constructor() {
-		this.app = fastify({logger: pino({level: "info"})});
+		this.app = fastify({logger: logger});
 		this.host = app.host;
 		this.port = Number(app.port);
 

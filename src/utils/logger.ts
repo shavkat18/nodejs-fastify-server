@@ -19,5 +19,4 @@ export const envToLogger: iLogger = {
 	production: true,
 	test: false,
 };
-
-export const logger = envToLogger[node.node_env] ?? true;
+export const logger = envToLogger[node.node_env as keyof typeof envToLogger] ?? true;
