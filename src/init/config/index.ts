@@ -1,16 +1,12 @@
 import dotenv from "dotenv";
+import * as process from "process";
 
 dotenv.config();
-const {
-	SERVER_ADDR,
-	SERVER_PORT,
-	NODE_ENV
-} = process.env;
 
-export const node = {
-	node_env: NODE_ENV
+export const service = {
+	node_env: String(process.env.NODE_ENV),
 };
 export const app = {
-	host: SERVER_ADDR,
-	port: SERVER_PORT
+	host: String(process.env.SERVER_ADDR),
+	port: Number(process.env.SERVER_PORT)
 };

@@ -25,7 +25,9 @@
             "@logger": ["./src/init/logger"],
             "@interfaces": ["./src/interfaces"],
             "@database/*": ["./src/init/database/*"],
-            "@utils/*": ["./src/utils/*"]
+            "@utils/*": ["./src/utils/*"],
+            "@swagger": ["./src/init/swagger"],
+
         }
     },
     "exclude": [
