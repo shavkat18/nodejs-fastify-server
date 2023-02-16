@@ -72,9 +72,9 @@ fastify.ready(err => {
 fastify.setErrorHandler(function (error, request, reply) {
 	if (error) {
 		fastify.log.error(error);
-		void reply.status(500).send({ok: false});
+		reply.status(500).send({ok: false});
 	} else {
-		void reply.send(error);
+		reply.send(error);
 	}
 });
 

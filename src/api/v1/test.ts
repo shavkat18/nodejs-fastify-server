@@ -5,6 +5,5 @@ export default function (fastify: FastifyInstance, opts: FastifyPluginOptions, d
 	fastify.get("/",{}, (request, reply) => {
 		void reply.send({msg:"ok"});
 	});
-	// fastify.get("/", (request:FastifyRequest, reply) => reply.send({msg: "ok"}));
 	done();
 }
